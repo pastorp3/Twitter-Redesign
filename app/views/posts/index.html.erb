@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Posts</h1>
+    
+  <%= form_with(url: "/posts/new", method: "get") do %>
+    <%= text_field_tag(:content, 'New Post') %><br>
+    <%= submit_tag("Create Post") %>
+  <% end %>
+
+<h1>Recent Posts</h1>
+    <% @posts.each do |post| %>
+      <tr>
+        <%= post.content %><br>
+        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td><br>
+      </tr>
+    <% end %>
+
+<br>
+
+<%= current_user.inspect %>
+
+
