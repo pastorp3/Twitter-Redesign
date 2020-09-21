@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :comments
 	resources :posts, only: [:index, :new, :destroy ]
  
   devise_for :users, :controllers => { registrations: 'registrations' }
