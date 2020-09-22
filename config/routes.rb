@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   resources :friendships
-  resources :likes
-  resources :comments
-	resources :posts, only: [:index, :new, :destroy ]
+	resources :posts, only: [:index, :create] do
+		    resources :comments, only: [:create]
+    		resources :likes, only: [:create, :destroy]
+	end
  
   devise_for :users, :controllers => { registrations: 'registrations' }
   root "posts#index"
