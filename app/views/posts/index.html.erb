@@ -1,22 +1,27 @@
 <p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="text-left">
+    <div class=" conatiner bg-light pt-3 pl-3 pb-3 pr-3 rounded">
+      <span class="title title-color">POST SOMETHING</span>  
+      <%= form_with(url: "/posts/new", method: "get") do %>
+        <%= text_field_tag(:content, 'New Post', class: "post-input") %><br><br>
+        <%= submit_tag("Create Post") %>
+      <% end %>
+    </div>
+    <br>
+    <div class="container bg-light posts">
+      <span>Recent Posts</span><br>
+          <% @posts.each do |post| %>
+            <tr>
+              <%= post.content %><br>
+              <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td><br>
+            </tr>
+          <% end %>
+    </div>
 
-<h1 >Posts</h1>
-    
-  <%= form_with(url: "/posts/new", method: "get") do %>
-    <%= text_field_tag(:content, 'New Post') %><br>
-    <%= submit_tag("Create Post") %>
-  <% end %>
-
-<h1>Recent Posts</h1>
-    <% @posts.each do |post| %>
-      <tr>
-        <%= post.content %><br>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td><br>
-      </tr>
-    <% end %>
-
-<br>
-
-<%= current_user.inspect %>
+    <br>
+  </div>
+  <%= current_user.inspect %>
+</div>
 
 

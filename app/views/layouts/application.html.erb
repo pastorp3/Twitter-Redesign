@@ -8,11 +8,83 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+  
+  <body class="main-grid">
+    <% if user_signed_in? %>
+     
+      <div class="left-container bg-dark">
+          <div class="d-flex pt-3 pb-3 pr-3 pl-3">
+            <img class="icon-user mr-2" src="https://cdn.iconscout.com/icon/free/png-512/avatar-375-456327.png">
+            <span class="title-color username"><%= current_user.username %></span>
+          </div>
+          <div class="d-flex text-center pl-3 pr-3 justify-content-between mt-3">
+            <div>
+              <span class="light-grey">0</span><br>
+              <span class="title-color">Following</span>
+            </div>
+            <div>
+              <span class="light-grey">0</span><br>
+              <span class="title-color">Followers</span>
+            </div>
+          </div>
+          <div>
+            <div class=" pt-3 pb-3 pl-3 pr-3">
+              <img class="icon mr-3" alt="home-icon"src="https://cdn.icon-icons.com/icons2/1509/PNG/512/twitterhome_104282.png">
+              <span class="title-color icon-text">HOME</span>
+            </div>
+            <div class=" pt-3 pb-3 pl-3 pr-3">
+              <img class="icon mr-3" alt="home-icon"src="https://static.thenounproject.com/png/395124-200.png">
+              <span class="title-color icon-text">CONNECT</span>
+            </div>
+            <div class=" pt-3 pb-3 pl-3 pr-3">
+              <img class="icon mr-3" alt="home-icon"src="https://www.iconfinder.com/data/icons/feather-2/24/hash-512.png">
+              <span class="title-color icon-text">DISCOVER</span>
+            </div>
+            <div class=" pt-3 pb-3 pl-3 pr-3">
+              <img class="icon mr-3" alt="home-icon"src="https://lh3.googleusercontent.com/proxy/a4Owcnkd1mks5jkLwxr55R9VnEqPPgCo6mozHOnrU8XletwHtBv_4CACAene4vx4r36DpPj-hIYrc7oig_9rAXz-Nw2IPLpiJZz_qsEsztZVwqYH0TfT7c-ev3xn2YMwe3Q">
+              <span class="title-color icon-text">PROFILE</span>
+            </div>
+            <div class=" pt-3 pb-3 pl-3 pr-3">
+              <img class="icon mr-3" alt="home-icon"src="https://image.flaticon.com/icons/png/512/69/69517.png">
+              <span class="title-color icon-text">STATISTICS</span>
+            </div>
+          </div>
+      </div>
+      <div class="right-container">
+        <div class="top-section d-flex justify-content-between pb-1 pr-3 pl-3 twitter-color">
+          <div>
+            <img class="icon-nav" src="https://icon-library.com/images/twitter-icon-white-png/twitter-icon-white-png-8.jpg">
+          </div>
+          <div class="d-flex pt-2 pm-2">
+            <img class="icon-nav-special mr-3" src="https://cdn.onlinewebfonts.com/svg/img_551847.png">
+            <img class="icon-nav-special mr-3 "src="https://img.pngio.com/message-icon-png-image-free-download-searchpngcom-message-icon-png-715_657.png">
+            <img class="icon-nav-special mr-3 "src="https://www.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-512.png">
+            <img class="icon-nav-special mr-3" src="https://icons-for-free.com/iconfiles/png/512/gear+preferences+settings+icon-1320166911584226160.png">
+          </div>
+        </div>
+        <div class="bottom-section"> 
+          <div class="bottom-left">
+            <% if notice %>
+                <p class="alert alert-success"><%= notice %></p>
+              <% end %>
+              <% if alert %>
+                <p class="alert alert-danger"><%= alert %></p>
+              <% end %>
+            <%= yield %>
+            <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+          </div>
+          <div class="bottom-right"></div>
+        </div>
+      </div>
+   
+    <% else %>
+      
+        <div class="left-container twitter-color"></div>
+        <div class="right-container text-center pt-3 pr-3 pl-3 pb-3 margin-login">
+          <%= yield %>
+        </div>
+      
+    <% end %>
 
-  <body>
-     <p class="notice"><%= notice %></p>
-     <p class="alert"><%= alert %></p>
-
-    <%= yield %>
   </body>
 </html>
