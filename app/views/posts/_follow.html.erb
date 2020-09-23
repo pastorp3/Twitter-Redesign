@@ -6,13 +6,15 @@
 		<div class="mt-3 title-color">
 
 			<% @user.each do |user| %>
-				
-				<img class="icon-user mr-2" src="https://cdn.iconscout.com/icon/free/png-512/avatar-375-456327.png">
-				
-				<%= user.username  %>
-				<span class="follow-link"><%= follow(user) %></span>
-				<br><br>
-
+				<div class="d-flex">
+					<img class="icon-user mr-2" src="https://cdn.iconscout.com/icon/free/png-512/avatar-375-456327.png">
+					<div>
+						<%= user.username  %><br>
+						<span class="follow-link"><%= follow(user) %></span>
+						<span class="follow-link"><%= link_to 'show', "/users/#{user.id}" , method: :post %></span>
+						<br><br>
+					</div>
+				</div>
 
 			<% end %>
 		</div>

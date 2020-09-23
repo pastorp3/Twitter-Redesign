@@ -8,7 +8,7 @@
   <div class="container">
    
     <div class="text-left">
-      <div class=" conatiner bg-light pt-3 pl-3 pb-3 pr-3 rounded">
+      <div class=" conatiner bg-white pt-3 pl-3 pb-3 pr-3 rounded">
         <span class="title title-color">POST SOMETHING</span>  
         <%= form_for(@post) do |form| %>
           <%= form.text_field :content, id: :post_content, class: 'form-control', placeholder: 'Add New Post' %>
@@ -21,7 +21,7 @@
         <% end %>
       </div>
       <br>
-      <div class="container bg-light posts pt-1 pb-3">
+      <div class="container bg-white posts pt-1 pb-3">
         <div class="pt-3 pb-3 recent_post_border mb-3">
           <span class="twitter-text">Recent Posts</span><br>
         </div>

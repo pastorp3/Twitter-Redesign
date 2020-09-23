@@ -1,0 +1,42 @@
+<div class="bottom-left"></div>
+<div class="bottom-right  ">
+	<div class="text-center total-width mt-3">
+	
+		<img class="icon-user-show " src="https://cdn.iconscout.com/icon/free/png-512/avatar-375-456327.png"><br>
+		<span class=" mt-3 "><%= @user.username %></span><br>
+		<span class=" mt-3  gray-text"><%= @user.email %></span>
+		<div class="d-flex justify-content-between border mt-3 pl-2 pr-2">
+			<div class="border-right pr-2 mr-2">
+				<span><%= @user.posts.count %></span><br>
+				<span class="gray-text">Posts</span>
+			</div>
+			<div>
+				<span ><%=  following(@user) %></span><br>
+				<span class="gray-text">Following</span>
+			</div>
+			<div class="border-left pl-2 ml-2" >
+				<span ><%=  followers(@user) %> </span><br>
+              <span class="gray-text">Followers</span>
+			</div>
+			
+		</div>
+
+	</div>
+	<div class="pl-2 pt-3 border-bottom pb-3">
+		<span class="gray-text ">FOLLOWED BY</span>
+	</div>
+	<div >
+		<% @user.other_friendships.each do |user| %>
+			<div class="d-flex mt-3 pl-2">
+			<img class="icon-user mr-2" src="https://cdn.iconscout.com/icon/free/png-512/avatar-375-456327.png">
+			
+			<div>
+				<span class="bold"><%= user.user.username %></span><br>
+				<span class="gray-text"><%= user.user.email %> </span><br>
+				<span class="follow-link"><%= follow(user) %></span>
+			</div>
+			</div>
+		<% end %><br>
+	</div>
+
+</div>
