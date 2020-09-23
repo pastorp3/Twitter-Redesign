@@ -38,6 +38,7 @@ body {
 
 .bottom-left {
 	width: 80%;
+	border-right: 1px solid #AAB8C2;
 
 }
 
@@ -70,6 +71,10 @@ body {
 
 .light-grey {
 	color: #E1E8ED;
+}
+
+.gray-text {
+	color: #AAB8C2;
 }
 
 .icon {
@@ -137,4 +142,46 @@ body {
 	text-decoration: none;
 	padding: 5px 150px 5px 150px;
 	border-radius: 10px;
+}
+
+.bottom-nav {
+	width: 100%;
+	height: 50px;
+	border-bottom: 1px solid #AAB8C2;
+	color: #657786;
+}
+
+.nav-bttn {
+	padding: 5px 15px 5px 15px;
+	font-weight: 700;
+}
+
+.nav-title {
+	padding: 5px 15px 5px 15px;
+	font-weight: 700;
+}
+
+.nav-bttn:hover {
+	color: black;
+	border-bottom: 3px solid #00acee;
+}
+
+.border-special {
+	border-bottom: 1px solid #AAB8C2;
+}
+
+.how_to_follow {
+	margin: 10px 0 10px 0;
+}
+
+.follow-link {
+	font-size: 10px;
+}
+
+.post-right {
+	width: 100%;
+}
+
+.recent_post_border {
+	border-bottom: 1px solid #AAB8C2;
 }

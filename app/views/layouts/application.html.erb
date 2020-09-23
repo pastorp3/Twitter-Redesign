@@ -63,18 +63,7 @@
           </div>
         </div>
         <div class="bottom-section"> 
-          <div class="bottom-left">
-            <% if notice %>
-                <p class="alert alert-success"><%= notice %></p>
-              <% end %>
-              <% if alert %>
-                <p class="alert alert-danger"><%= alert %></p>
-              <% end %>
-            <%= yield %>
-            <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
-          </div>
-          <div class="bottom-right"></div>
-        </div>
+          <%= yield %>
       </div>
    
     <% else %>
