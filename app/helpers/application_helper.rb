@@ -7,4 +7,16 @@ module ApplicationHelper
       link_to('Like!', post_likes_path(post_id: post.id), method: :post)
     end
   end
+
+
+  def followers(user)
+   	followers = user.other_friendships.count
+   	followers
+  end
+
+  
+   def following(user)
+   		following = user.friendships.count
+   		following
+   end
 end
