@@ -2,9 +2,6 @@ body {
   background-color: #fff;
   color: #333;
   margin: 33px;
-}
-
-body {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -32,6 +29,7 @@ td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
+  padding: 0 5px 7px;
 }
 
 pre {
@@ -57,11 +55,11 @@ th {
   padding-bottom: 5px;
 }
 
-td {
-  padding: 0 5px 7px;
+div.field, div.actions {
+  margin-bottom: 10px;
 }
 
-div.field, div.actions {
+div.actions {
   margin-bottom: 10px;
 }
 
