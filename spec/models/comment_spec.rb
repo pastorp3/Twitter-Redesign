@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe Comment, type: :model do
@@ -10,7 +12,7 @@ RSpec.describe Comment, type: :model do
   end
 
   it '2. SUCCESS CHECK - Checks if a user can be created' do
-    User.create(email: 'test2@test.com', username: 'mateo',  password: 'this is a password')
+    User.create(email: 'test2@test.com', username: 'mateo', password: 'this is a password')
     test_u = User.first
     Post.create(content: 'This is a test post', user_id: test_u.id)
     test_p = Post.first

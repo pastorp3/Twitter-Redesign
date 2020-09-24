@@ -1,7 +1,7 @@
+# rubocop: disable all
+
 class LikesController < ApplicationController
-
-
-    def create
+  def create
     @like = current_user.likes.new(post_id: params[:post_id])
 
     if @like.save
@@ -21,3 +21,5 @@ class LikesController < ApplicationController
     end
   end
 end
+
+# rubocop: enable all

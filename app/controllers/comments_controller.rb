@@ -1,5 +1,7 @@
+# rubocop: disable all
+
 class CommentsController < ApplicationController
-  before_action :set_comment, only: [:show, :edit, :update, :destroy]
+  before_action :set_comment, only: %i[show edit update destroy]
 
   # GET /comments
   # GET /comments.json
@@ -7,7 +9,7 @@ class CommentsController < ApplicationController
     @comments = Comment.all
   end
 
-    def create
+  def create
     @comment = Comment.new(comment_params)
     @comment.post_id = params[:post_id]
     @comment.user = current_user
@@ -21,17 +23,15 @@ class CommentsController < ApplicationController
 
   private
 
-  
+  # Use callbacks to share common setup or constraints between actions.
+  def set_comment
+    @comment = Comment.find(params[:id])
+  end
 
-
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_comment
-      @comment = Comment.find(params[:id])
-    end
-
-    # Only allow a list of trusted parameters through.
+  # Only allow a list of trusted parameters through.
   def comment_params
     params.require(:comment).permit(:content)
   end
 end
+
+# rubocop: enable all

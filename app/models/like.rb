@@ -1,5 +1,9 @@
+# rubocop: disable all
+
 class Like < ApplicationRecord
-validates :user_id, uniqueness: { scope: :post_id }
+  validates :user_id, uniqueness: { scope: :post_id }
   belongs_to :user
   belongs_to :post
 end
+
+# rubocop: disable all

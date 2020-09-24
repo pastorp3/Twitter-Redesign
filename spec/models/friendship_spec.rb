@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe Friendship, type: :model do
@@ -9,7 +11,7 @@ RSpec.describe Friendship, type: :model do
   end
 
   it '2. SUCCESS CHECK - Checks if a friendship can be created' do
-    User.create(email: 'test2@test.com', username: 'mateo',password: 'this is a password')
+    User.create(email: 'test2@test.com', username: 'mateo', password: 'this is a password')
     test_u1 = User.first
     User.create(email: 'test@test.com', username: 'pastor', password: 'this is a password')
     test_u2 = User.last

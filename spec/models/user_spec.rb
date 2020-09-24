@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
@@ -5,7 +7,7 @@ RSpec.describe User, type: :model do
   Friendship.delete_all
   User.create(email: 'test2@test.com', username: 'mateo', password: 'this is a password')
   test_u1 = User.first
-  User.create(email: 'test@test.com', username: 'pastor',password: 'this is a password')
+  User.create(email: 'test@test.com', username: 'pastor', password: 'this is a password')
   test_u2 = User.last
   Friendship.create(user_id: test_u1.id, friend_id: test_u2.id, status: false)
   Friendship.create(user_id: test_u2.id, friend_id: test_u1.id, status: false)
