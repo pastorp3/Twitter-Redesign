@@ -1,11 +1,14 @@
 <div class=" bottom-left">
-  <p id="notice"><%= notice %></p>
+  <div class="bg-success text-center">
+    <p id="notice " ><%= notice %></p>
+  </div>
+  <div class="bg-danger text-center"><p id="notice " ><%= alert %></p></div>
    <div class="bottom-nav d-flex mb-3">
       <span class="nav-bttn "><a href="/" class="hard-gray-text">POSTS</a></span>
       <span class="nav-bttn "><a href="/" class="hard-gray-text">PHOTOS</a></span>
       <span class="nav-bttn "><a href="/" class="hard-gray-text">VIDEOS</a></span>
     </div>
-  <div class="container border">
+  <div class="container ">
    
     <div class="text-left">
       <div class=" conatiner bg-white pt-3 pl-3 pb-3 pr-3 rounded">
@@ -28,7 +31,7 @@
             <% @posts.each do |post| %>
             <div class="d-flex">
               <div>
-                <img class="icon-user mr-2" src="https://cdn.iconscout.com/icon/free/png-512/avatar-375-456327.png">
+                    <img class="icon-user mr-2" src="https://www.ub.edu/idp/web/sites/default/files/staff/2019-10/default-avatar.png">
               </div>
               <div class="post-right">
                 <div class="d-flex justify-content-between">
@@ -53,11 +56,8 @@
             </div>
             <% end %>
       </div>
-
       <br>
     </div>
-    <%= current_user.inspect %>
-    <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
   </div>
 </div>
 <div class="botton-right">

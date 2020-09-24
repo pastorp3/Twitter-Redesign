@@ -14,11 +14,13 @@
 		    	<div>
 		    		<% @user.posts.each do |post| %>
 		    			<div class="d-flex mt-3 mb-3 ">
-		    				<img class="icon-user mr-2" src="https://cdn.iconscout.com/icon/free/png-512/avatar-375-456327.png">
+		    				    <img class="icon-user mr-2" src="https://www.ub.edu/idp/web/sites/default/files/staff/2019-10/default-avatar.png">
 			    			<div>
 			    				<%= @user.username %><br>
 			    				<span class="gray-text"><%= post.content %></span>
+
 			    			</div>
+
 
 		    			</div>
 		    		<% end %>
@@ -33,9 +35,12 @@
 <div class="bottom-right ">
 	<div class="text-center total-width mt-3">
 	
-		<img class="icon-user-show " src="https://cdn.iconscout.com/icon/free/png-512/avatar-375-456327.png"><br>
+		    <img class="icon-user-show mr-2" src="https://www.ub.edu/idp/web/sites/default/files/staff/2019-10/default-avatar.png"><br>
 		<span class=" mt-3 "><%= @user.username %></span><br>
-		<span class=" mt-3  gray-text"><%= @user.email %></span>
+		<span class=" mt-3  gray-text"><%= @user.email %></span><br>
+		<% if @user.id != current_user.id %>
+			<span class="follow-bttn mt-3"><%= follow(@user) %></span>
+		<% end %>
 		<div class="d-flex justify-content-between border mt-3 pl-2 pr-2">
 			<div class="border-right pr-2 mr-2">
 				<span><%= @user.posts.count %></span><br>
