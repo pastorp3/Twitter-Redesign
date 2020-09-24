@@ -1,5 +1,3 @@
-# rubocop: disable all
-
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
@@ -12,5 +10,3 @@ class User < ApplicationRecord
   has_many :friendships
   has_many :other_friendships, foreign_key: 'friend_id', class_name: 'Friendship'
 end
-
-# rubocop: enable all

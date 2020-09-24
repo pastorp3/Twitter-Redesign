@@ -1,224 +1,214 @@
 @import "bootstrap/scss/bootstrap";
-
 html {
-   margin: 0px;
-   height: 100%;
-   width: 100%;
+  margin: 0px;
+  height: 100%;
+  width: 100%;
 }
 
 body {
-   margin: 0px;
-   min-height: 100%;
-   width: 100%;
+  margin: 0px;
+  min-height: 100%;
+  width: 100%;
 }
 
 .main-grid {
-	display: flex;
+  display: flex;
 }
 
 .left-container {
-	width: 13%;
-	min-height: 100%;
+  width: 13%;
+  min-height: 100%;
 }
 
 .right-container {
-	width: 87%;
+  width: 87%;
 }
 
 .top-section {
-	width: 100%;
-	height: fit-content;
+  width: 100%;
+  height: fit-content;
 }
 
 .bottom-section {
-	display: flex;
-	background-color: #F5F8FA;
-	min-height: 93%;
+  display: flex;
+  background-color: #F5F8FA;
+  min-height: 93%;
 }
 
 .bottom-left {
-	width: 80%;
-	border-right: 1px solid #AAB8C2;
-
+  width: 80%;
+  border-right: 1px solid #AAB8C2;
 }
 
 .bottom-right {
-	width: 20%;
-
+  width: 20%;
 }
 
 .title {
-	font-size: 20px;
+  font-size: 20px;
 }
 
 .post-input {
-	width: 100%;
-	height: 50px;
-
+  width: 100%;
+  height: 50px;
 }
 
 .posts {
-	height: fit-content;
+  height: fit-content;
 }
 
 .title-color {
-	color: #657786;
+  color: #657786;
 }
 
 .username {
-	font-size: 120%;
+  font-size: 120%;
 }
 
 .light-grey {
-	color: #E1E8ED;
+  color: #E1E8ED;
 }
 
 .gray-text {
-	color: #AAB8C2;
+  color: #AAB8C2;
 }
 
 .icon {
-	width: 20px;
-	height: 20px;
+  width: 20px;
+  height: 20px;
 }
 
 .icon-text {
-	font-size: 17px;
+  font-size: 17px;
 }
 
 .icon-user {
-	width: 40px;
-	height: 40px;
-	border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 
 .icon-user-show {
-	width: 100px;
-	height: 100px;
-	border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
 }
 
 .icon-nav {
-	width: 40px;
-	height: 40px;	
+  width: 40px;
+  height: 40px;
 }
 
 .icon-nav-special {
-	width: 40px;
-	height: 40px;	
+  width: 40px;
+  height: 40px;
 }
 
-
 .twitter-color {
-	background-color: #00acee;
+  background-color: #00acee;
 }
 
 .twitter-text {
-	color: #00acee;
+  color: #00acee;
 }
 
 .border-login-btn {
-	border: 1px solid  #00acee;
-	border-radius: 10px;
+  border: 1px solid #00acee;
+  border-radius: 10px;
 }
 
 .login-input {
-	height: 40px;
+  height: 40px;
 }
 
 .signin-input {
-	height: 40px;
-	width: 350px;
+  height: 40px;
+  width: 350px;
 }
 
-
-.margin-login{
-	margin-top: 50px;
+.margin-login {
+  margin-top: 50px;
 }
 
 .login-text {
-	font-size: 35px;
-	font-weight: 700;
+  font-size: 35px;
+  font-weight: 700;
 }
 
 .title-login {
-	margin-top: 100px;
+  margin-top: 100px;
 }
 
 .Sign-in {
-	text-decoration: none;
-	padding: 5px 150px 5px 150px;
-	border-radius: 10px;
+  text-decoration: none;
+  padding: 5px 150px 5px 150px;
+  border-radius: 10px;
 }
 
 .bottom-nav {
-	width: 100%;
-	height: 50px;
-	border-bottom: 1px solid #AAB8C2;
-	color: #657786;
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid #AAB8C2;
+  color: #657786;
 }
 
 .nav-bttn {
-	text-decoration: none; 
-	padding: 5px 15px 5px 15px;
-	font-weight: 700;
+  text-decoration: none;
+  padding: 5px 15px 5px 15px;
+  font-weight: 700;
 }
 
 .nav-title {
-	padding: 5px 15px 5px 15px;
-	font-weight: 700;
+  padding: 5px 15px 5px 15px;
+  font-weight: 700;
 }
 
 .nav-bttn:hover {
-	color: black;
-	border-bottom: 3px solid #00acee;
+  color: black;
+  border-bottom: 3px solid #00acee;
 }
 
 .border-special {
-	border-bottom: 1px solid #AAB8C2;
+  border-bottom: 1px solid #AAB8C2;
 }
 
 .how_to_follow {
-	margin: 10px 0 10px 0;
+  margin: 10px 0 10px 0;
 }
 
 .follow-link {
-	font-size: 10px;
+  font-size: 10px;
 }
 
 .post-right {
-	width: 100%;
+  width: 100%;
 }
 
 .recent_post_border {
-	border-bottom: 1px solid #AAB8C2;
+  border-bottom: 1px solid #AAB8C2;
 }
 
 .total-width {
-	min-width: 100%;
+  min-width: 100%;
 }
 
 .bold {
-	font-weight: 700;
+  font-weight: 700;
 }
 
 .cover-img {
-	width: 100%;
-	height: 36%;
+  width: 100%;
+  height: 36%;
 }
 
 .hard-gray-text {
-	color: #657786;
+  color: #657786;
 }
 
 .follow-bttn {
-	font-size: 12px;
-	padding: 5px 40px 5px 40px;
-	border: 1px solid black;
-	border-radius: 5px;
-}
-
-.sign-out {
-	
+  font-size: 12px;
+  padding: 5px 40px 5px 40px;
+  border: 1px solid black;
+  border-radius: 5px;
 }
 

@@ -1,5 +1,3 @@
-# rubocop: disable all
-
 class RegistrationsController < Devise::RegistrationsController
   private
 
@@ -11,5 +9,3 @@ class RegistrationsController < Devise::RegistrationsController
     params.require(:user).permit(:name, :username, :email, :password, :password_confirmation, :current_password)
   end
 end
-
-# rubocop: enable all

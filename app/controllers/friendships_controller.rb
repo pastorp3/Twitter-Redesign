@@ -1,5 +1,3 @@
-# rubocop: disable all
-
 class FriendshipsController < ApplicationController
   before_action :set_friendship, only: %i[show edit update destroy]
 
@@ -20,5 +18,3 @@ class FriendshipsController < ApplicationController
     @friendship = Friendship.find(params[:id])
   end
 end
-
-# rubocop: enable all

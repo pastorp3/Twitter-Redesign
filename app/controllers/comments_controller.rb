@@ -1,5 +1,3 @@
-# rubocop: disable all
-
 class CommentsController < ApplicationController
   before_action :set_comment, only: %i[show edit update destroy]
 
@@ -33,5 +31,3 @@ class CommentsController < ApplicationController
     params.require(:comment).permit(:content)
   end
 end
-
-# rubocop: enable all
