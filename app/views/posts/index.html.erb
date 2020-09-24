@@ -1,9 +1,9 @@
 <div class=" bottom-left">
   <p id="notice"><%= notice %></p>
    <div class="bottom-nav d-flex mb-3">
-      <span class="nav-bttn ">POSTS</span>
-      <span class="nav-bttn ">PHOTOS</span>
-      <span class="nav-bttn ">VIDEOS</span>
+      <span class="nav-bttn "><a href="/" class="hard-gray-text">POSTS</a></span>
+      <span class="nav-bttn "><a href="/" class="hard-gray-text">PHOTOS</a></span>
+      <span class="nav-bttn "><a href="/" class="hard-gray-text">VIDEOS</a></span>
     </div>
   <div class="container border">
    
@@ -32,7 +32,7 @@
               </div>
               <div class="post-right">
                 <div class="d-flex justify-content-between">
-                  <%= post.user.name %><br>
+                  <%= post.user.username %><br>
                   <%= like_or_dislike_btn(post) %>
                 </div>
                 <span class="gray-text"><%= post.content %></span><br>
@@ -41,7 +41,7 @@
                 <div>
                   <% post.comments.each do |comment| %>
                   
-                      <span><%= comment.user.name %> : <%= comment.content %><br> </span>
+                      <span><%= comment.user.username %> : <%= comment.content %><br> </span>
 
                   <% end %>
                   <%= form_for(post.comments.new, url: post_comments_path(post)) do |form| %>

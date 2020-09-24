@@ -1,9 +1,9 @@
 <div class="bottom-left">
 	<img class="cover-img" src="https://lh3.googleusercontent.com/proxy/1sx3w2F78SKmYGaFpE4wvcahSjiyooGtE-BVQe6ZPi52E1s-UprTfLM4XQpowTMRNuCO0TcgbZ7VDRAjNGKWnvnhfpDb_eKdSVtTEBtVxZbeKClR7EkCoJu8eN04yATbQpY7w2cw0ZJsSB-8Iw">
 	<div class="bottom-nav d-flex mb-3 mt-3">
-      <span class="nav-bttn ">POSTS</span>
-      <span class="nav-bttn ">PHOTOS</span>
-      <span class="nav-bttn ">VIDEOS</span>
+      <span class="nav-bttn "><a href="/" class="hard-gray-text">POSTS</a></span>
+      <span class="nav-bttn "><a href="/" class="hard-gray-text">PHOTOS</a></span>
+      <span class="nav-bttn "><a href="/" class="hard-gray-text">VIDEOS</a></span>
     </div>
     <div>
     	<div class="container ">
@@ -65,7 +65,6 @@
 				<span class="bold"><%= user.user.username %></span><br>
 				<span class="gray-text"><%= user.user.email %> </span><br>
 				<span class="follow-link"><%= follow(user.user) %></span>
-				<span class="follow-link"><%= link_to 'show', "/users/#{user.id}" , method: :post %></span>
 			</div>
 			</div>
 		<% end %><br>

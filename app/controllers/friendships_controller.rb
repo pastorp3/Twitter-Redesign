@@ -12,11 +12,6 @@ class FriendshipsController < ApplicationController
     redirect_to root_path
   end
 
-  def update
-    redirect_to  'https://google.com'
-  end
-
-
   private
 
     def set_friendship
