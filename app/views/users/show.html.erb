@@ -1,5 +1,36 @@
-<div class="bottom-left"></div>
-<div class="bottom-right  ">
+<div class="bottom-left">
+	<img class="cover-img" src="https://lh3.googleusercontent.com/proxy/1sx3w2F78SKmYGaFpE4wvcahSjiyooGtE-BVQe6ZPi52E1s-UprTfLM4XQpowTMRNuCO0TcgbZ7VDRAjNGKWnvnhfpDb_eKdSVtTEBtVxZbeKClR7EkCoJu8eN04yATbQpY7w2cw0ZJsSB-8Iw">
+	<div class="bottom-nav d-flex mb-3 mt-3">
+      <span class="nav-bttn ">POSTS</span>
+      <span class="nav-bttn ">PHOTOS</span>
+      <span class="nav-bttn ">VIDEOS</span>
+    </div>
+    <div>
+    	<div class="container ">
+		    <div class="container bg-white posts pt-3 pb-3 border" >
+		    	<div class="border-bottom pb-2">
+		    		<span class="twitter-text bold">ALL POSTS</span>
+		    	</div>
+		    	<div>
+		    		<% @user.posts.each do |post| %>
+		    			<div class="d-flex mt-3 mb-3 ">
+		    				<img class="icon-user mr-2" src="https://cdn.iconscout.com/icon/free/png-512/avatar-375-456327.png">
+			    			<div>
+			    				<%= @user.username %><br>
+			    				<span class="gray-text"><%= post.content %></span>
+			    			</div>
+
+		    			</div>
+		    		<% end %>
+		    	</div>
+		    </div>
+		</div>
+	</div>
+
+
+
+</div>
+<div class="bottom-right ">
 	<div class="text-center total-width mt-3">
 	
 		<img class="icon-user-show " src="https://cdn.iconscout.com/icon/free/png-512/avatar-375-456327.png"><br>
@@ -33,7 +64,8 @@
 			<div>
 				<span class="bold"><%= user.user.username %></span><br>
 				<span class="gray-text"><%= user.user.email %> </span><br>
-				<span class="follow-link"><%= follow(user) %></span>
+				<span class="follow-link"><%= follow(user.user) %></span>
+				<span class="follow-link"><%= link_to 'show', "/users/#{user.id}" , method: :post %></span>
 			</div>
 			</div>
 		<% end %><br>
