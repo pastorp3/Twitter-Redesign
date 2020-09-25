@@ -2,7 +2,7 @@
 
 > This is a project to simulate a redsign of twitter 
 
-![social_media_gif](https://media1.tenor.com/images/a8e963f6d83f61bf82c90f5a8c2a26b5/tenor.gif?itemid=15614780)
+![social_media_gif](/app/assets/images/twitter-redesign.png)
 
 All rights to Gregoire Vella on Behance.
 
@@ -13,7 +13,7 @@ All rights to Gregoire Vella on Behance.
 
 ## Live Demo
 
-[Check the app out!!!](/app/assets/images/twitter-redesign.png)
+[Check the app out!!!](https://fast-eyrie-13626.herokuapp.com/users/sign_in)
 
 You have to Sign up to acces to de home page and interact with other users
 
