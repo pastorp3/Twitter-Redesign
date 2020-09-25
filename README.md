@@ -38,6 +38,10 @@ git clone https://github.com/pastorp3/Twitter-Redesign.git
 Instal gems with:
 
 ```
+yarn install --check-files
+```
+Installl yatn 
+```
 bundle install
 ```
 
@@ -49,11 +53,6 @@ Setup database with:
 ```
 
 ### Usage
-Before start server run 
-
-```
-    yarn install
-```
 
 Start server with:
 
