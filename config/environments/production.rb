@@ -2,7 +2,7 @@
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-  config.secret_key_base = '<%= ENV["SECRET_KEY_BASE"] %>'
+  config.secret_key_base = 'blipblapblup'
 
   # Code is not reloaded between requests.
   config.cache_classes = true
