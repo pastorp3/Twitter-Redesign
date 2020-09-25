@@ -4,6 +4,8 @@
 
 ![social_media_gif](https://media1.tenor.com/images/a8e963f6d83f61bf82c90f5a8c2a26b5/tenor.gif?itemid=15614780)
 
+All rights to Gregoire Vella on Behance.
+
 ## Built With
 
 - Ruby v2.7.0
@@ -11,7 +13,7 @@
 
 ## Live Demo
 
-[Check the app out!!!](https://fast-eyrie-13626.herokuapp.com/)
+[Check the app out!!!](/app/assets/images/twitter-redesign.png)
 
 You have to Sign up to acces to de home page and interact with other users
 
