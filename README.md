@@ -67,7 +67,7 @@ Open `http://localhost:3000/` in your browser.
 To run the tests just excecute this command from the root project folder
 
 ```
-    rpsec --format documentation
+    rspec --format documentation
 ```
 
 
