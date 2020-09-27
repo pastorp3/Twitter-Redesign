@@ -1,3 +1,5 @@
+# rubocop: disable all
+
 require_relative 'boot'
 
 require 'rails/all'
@@ -17,3 +19,5 @@ module TwitterRedesign
     # the framework and any gems in your application.
   end
 end
+
+# rubocop: enable all

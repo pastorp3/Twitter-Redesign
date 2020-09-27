@@ -1,3 +1,5 @@
+# rubocop: disable all
+
 class CreateLikes < ActiveRecord::Migration[6.0]
   def change
     create_table :likes do |t|
@@ -9,3 +11,5 @@ class CreateLikes < ActiveRecord::Migration[6.0]
     add_index :likes, :user_id
   end
 end
+
+# rubocop: enable all
