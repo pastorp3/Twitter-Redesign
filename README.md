@@ -6,6 +6,13 @@
 
 All rights to Gregoire Vella on Behance.
 
+## Description
+
+This is a clone of Twitter design from Gregoire Vella , in this project you have some of the basic features
+and I add a different ones, you can create your user, follow people and be followed, you can post whatever 
+you want like how you feel today , some of the extra features is the comments part that it is after every 
+posts in the home page, also you can like or dislike a posts and you will se the number of likes that a post have. 
+
 ## Built With
 
 - Ruby v2.7.0
