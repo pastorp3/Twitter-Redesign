@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TwitterRedesign</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  
+  <body class="main-grid">
+    <% if user_signed_in? %>
+     
+      <div class="left-container bg-dark">
+          <div class="d-flex pt-3 pb-3 pr-3 pl-3">
+            <img class="icon-user mr-2" src="https://www.ub.edu/idp/web/sites/default/files/staff/2019-10/default-avatar.png">
+            <span class="title-color username"><%= link_to "#{current_user.username}", "/users/#{current_user.id}",
+            class: "title-color" %></span>
+          </div>
+          <div class="d-flex text-center pl-3 pr-3 justify-content-between mt-3">
+            <div>
+              <span class="light-grey"><%=  following(current_user) %></span><br>
+              <span class="title-color">Following</span>
+            </div>
+            <div>
+              <span class="light-grey"><%=  followers(current_user) %> </span><br>
+              <span class="title-color">Followers</span>
+            </div>
+          </div>
+          <div>
+            <div class=" pt-3 pb-3 pl-3 pr-3">
+              <%= link_to root_path do %>
+              <img class="icon mr-3" alt="home-icon"src="https://cdn.icon-icons.com/icons2/1509/PNG/512/twitterhome_104282.png">
+              <span class="title-color  icon-text">HOME</span>
+              <% end %>
+            </div>
+            <div class=" pt-3 pb-3 pl-3 pr-3">
+              <img class="icon mr-3" alt="home-icon"src="https://static.thenounproject.com/png/395124-200.png">
+              <span class="title-color icon-text">CONNECT</span>
+            </div>
+            <div class=" pt-3 pb-3 pl-3 pr-3">
+              <img class="icon mr-3" alt="home-icon"src="https://www.iconfinder.com/data/icons/feather-2/24/hash-512.png">
+              <span class="title-color icon-text">DISCOVER</span>
+            </div>
+            <div class=" pt-3 pb-3 pl-3 pr-3">
+              <img class="icon mr-3" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEzLjMyMyA1MTMuMzIzIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTMuMzIzIDUxMy4zMjM7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxnPg0KCQk8cGF0aCBkPSJNMjU2LjY2MSwyNTcuMzIzYy0xMzUuMjc1LDAtMjQ1LjMzMywxMTAuMDU5LTI0NS4zMzMsMjQ1LjMzM2MwLDUuODg4LDQuNzc5LDEwLjY2NywxMC42NjcsMTAuNjY3aDQ2OS4zMzMNCgkJCWM1Ljg4OCwwLDEwLjY2Ny00Ljc3OSwxMC42NjctMTAuNjY3QzUwMS45OTUsMzY3LjM4MSwzOTEuOTM2LDI1Ny4zMjMsMjU2LjY2MSwyNTcuMzIzeiIvPg0KCTwvZz4NCjwvZz4NCjxnPg0KCTxnPg0KCQk8Y2lyY2xlIGN4PSIyNTYuNjYxIiBjeT0iMTE3LjMzMyIgcj0iMTE3LjMzMyIvPg0KCTwvZz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjwvc3ZnPg0K" />
+              <span class="title-color icon-text">PROFILE</span>
+            </div>
+            <div class=" pt-3 pb-3 pl-3 pr-3">
+              <img class="icon mr-3" alt="home-icon"src="https://image.flaticon.com/icons/png/512/69/69517.png">
+              <span class="title-color icon-text">STATISTICS</span>
+            </div>
+            <div class=" pt-3 pb-3 pl-3 pr-3">
+              <img class="icon mr-3" src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjUxMnB0IiB2aWV3Qm94PSIwIDAgNTEyLjAwNTMzIDUxMiIgd2lkdGg9IjUxMnB0IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Im0zMjAgMjc3LjMzNTkzOGMtMTEuNzk2ODc1IDAtMjEuMzMyMDMxIDkuNTU4NTkzLTIxLjMzMjAzMSAyMS4zMzIwMzF2ODUuMzM1OTM3YzAgMTEuNzUzOTA2LTkuNTU4NTk0IDIxLjMzMjAzMi0yMS4zMzU5MzggMjEuMzMyMDMyaC02NHYtMzIwYzAtMTguMjE4NzUtMTEuNjA1NDY5LTM0LjQ5NjA5NC0yOS4wNTQ2ODctNDAuNTU0Njg4bC02LjMxNjQwNi0yLjExMzI4MWg5OS4zNzEwOTNjMTEuNzc3MzQ0IDAgMjEuMzM1OTM4IDkuNTc4MTI1IDIxLjMzNTkzOCAyMS4zMzU5Mzd2NjRjMCAxMS43NzM0MzggOS41MzUxNTYgMjEuMzMyMDMyIDIxLjMzMjAzMSAyMS4zMzIwMzJzMjEuMzMyMDMxLTkuNTU4NTk0IDIxLjMzMjAzMS0yMS4zMzIwMzJ2LTY0YzAtMzUuMjg1MTU2LTI4LjcxNDg0My02My45OTk5OTk3NS02NC02My45OTk5OTk3NWgtMjI5LjMzMjAzMWMtLjgxMjUgMC0xLjQ5MjE4OC4zNjMyODE3NS0yLjI4MTI1LjQ2ODc0OTc1LTEuMDI3MzQ0LS4wODU5MzctMi4wMDc4MTItLjQ2ODc0OTc1LTMuMDUwNzgxLS40Njg3NDk3NS0yMy41MzEyNSAwLTQyLjY2Nzk2OSAxOS4xMzI4MTI3NS00Mi42Njc5NjkgNDIuNjY0MDYyNzV2Mzg0YzAgMTguMjE4NzUgMTEuNjA1NDY5IDM0LjQ5NjA5MyAyOS4wNTQ2ODggNDAuNTU0Njg3bDEyOC4zODY3MTggNDIuNzk2ODc1YzQuMzUxNTYzIDEuMzQzNzUgOC42Nzk2ODggMS45ODQzNzUgMTMuMjI2NTYzIDEuOTg0Mzc1IDIzLjUzMTI1IDAgNDIuNjY0MDYyLTE5LjEzNjcxOCA0Mi42NjQwNjItNDIuNjY3OTY4di0yMS4zMzIwMzJoNjRjMzUuMjg1MTU3IDAgNjQtMjguNzE0ODQ0IDY0LTY0di04NS4zMzU5MzdjMC0xMS43NzM0MzgtOS41MzUxNTYtMjEuMzMyMDMxLTIxLjMzMjAzMS0yMS4zMzIwMzF6bTAgMCIvPjxwYXRoIGQ9Im01MDUuNzUgMTk4LjI1MzkwNi04NS4zMzU5MzgtODUuMzMyMDMxYy02LjA5NzY1Ni02LjEwMTU2My0xNS4yNzM0MzctNy45Mzc1LTIzLjI1LTQuNjMyODEzLTcuOTU3MDMxIDMuMzA4NTk0LTEzLjE2NDA2MiAxMS4wOTM3NS0xMy4xNjQwNjIgMTkuNzE0ODQ0djY0aC04NS4zMzIwMzFjLTExLjc3NzM0NCAwLTIxLjMzNTkzOCA5LjU1NDY4OC0yMS4zMzU5MzggMjEuMzMyMDMyIDAgMTEuNzc3MzQzIDkuNTU4NTk0IDIxLjMzMjAzMSAyMS4zMzU5MzggMjEuMzMyMDMxaDg1LjMzMjAzMXY2NGMwIDguNjIxMDkzIDUuMjA3MDMxIDE2LjQwNjI1IDEzLjE2NDA2MiAxOS43MTQ4NDMgNy45NzY1NjMgMy4zMDQ2ODggMTcuMTUyMzQ0IDEuNDY4NzUgMjMuMjUtNC42Mjg5MDZsODUuMzM1OTM4LTg1LjMzNTkzN2M4LjMzOTg0NC04LjMzOTg0NCA4LjMzOTg0NC0yMS44MjQyMTkgMC0zMC4xNjQwNjN6bTAgMCIvPjwvc3ZnPg==" />
+              <%= link_to 'SIGN OUT', destroy_user_session_path, method: :delete, class: "sign-out title-color icon-text" %>
+            </div>
+          </div>
+      </div>
+      <div class="right-container">
+        <div class="top-section d-flex justify-content-between pb-1 pr-3 pl-3 twitter-color">
+          <div class="pt-2">
+            <img class="icon-nav" src="data:image/svg+xml;base64,PHN2ZyBpZD0iYm9sZCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjQgMjQiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSI1MTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0ibTEyLjk2MyAwYy00Ljk4NCAwLTkuMDM4IDQuMDY3LTkuMDM4IDkuMDY4IDAgLjU1OC0uMTU3IDEuMTAzLS40NjkgMS42MDFsLTIuMjY1IDMuOTMyYy0uMTI1LjIwMS0uMTkxLjQyOS0uMTkxLjY2IDAgLjY4My41NTUgMS4yMzkgMS4yMzcgMS4yMzloMS43NjN2Mi4yODNjMCAxLjIyMi45OTMgMi4yMTcgMi4yMTMgMi4yMTcuMjQ0IDAgLjQ3My0uMDM4LjYyNS0uMDk1bDIuMTYyLS41ODd2Mi45MzJjMCAuNDE0LjMzNi43NS43NS43NWg4LjVjLjQxNCAwIC43NS0uMzM2Ljc1LS43NXYtNS4yMzVjMC0xLjI2Mi40NDctMi41NTQgMS4yOTQtMy43MzcgMS4xMTYtMS41NTcgMS43MDYtMy4zNiAxLjcwNi01LjIxMyAwLTQuOTk4LTQuMDU0LTkuMDY1LTkuMDM3LTkuMDY1em0yLjU3NyAxNC44OTFjMCAuNjEtLjUgMS4xMS0xLjEyIDEuMTFoLTEuODRjLS41NCAwLTEuMTItLjQtMS4xMi0xLjI5di0uNTRoNC4wOHptLjgxLTIuOTZjLS40Mi4zNC0uNjkuNzgtLjc4IDEuMjRoLTQuMTNjLS4wNy0uNDUtLjMyLS44Ny0uNzMtMS4xOS0xLjExLS44Ny0xLjc0LTIuMTgtMS43MS0zLjYuMDUtMi4zOCAyLjA0LTQuMzUgNC40My00LjM4IDEuMjEtLjAzIDIuMzcuNDQgMy4yNCAxLjMuODYuODQgMS4zMyAxLjk3IDEuMzMgMy4xNyAwIDEuMzUtLjU5OSAyLjYxLTEuNjUgMy40NnoiLz48L3N2Zz4=" />
+          </div>
+          <div class="d-flex pt-2 pm-2">
+            <img class="icon-nav-special mr-3"  src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxnPg0KCQk8cGF0aCBkPSJNNDk2LjY1OSwzMTIuMTA3bC00Ny4wNjEtMzYuOGMwLjU5Ny01LjY3NSwxLjEwOS0xMi4zMDksMS4xMDktMTkuMzI4YzAtNy4wMTktMC40OTEtMTMuNjUzLTEuMTA5LTE5LjMyOGw0Ny4xMDQtMzYuODIxDQoJCQljOC43NDctNi45MTIsMTEuMTM2LTE5LjE3OSw1LjU2OC0yOS4zOTdMNDUzLjMzMSw4NS43NmMtNS4yMjctOS41NTctMTYuNjgzLTE0LjQ2NC0yOC4zMDktMTAuMTc2bC01NS41MzEsMjIuMjkzDQoJCQljLTEwLjY0NS03LjY4LTIxLjgwMy0xNC4xNjUtMzMuMzQ0LTE5LjM0OWwtOC40NDgtNTguOTAxQzMyNi4zMTIsOC40NDgsMzE2LjU4NCwwLDMwNS4wODYsMGgtOTguMTMzDQoJCQljLTExLjQ5OSwwLTIxLjIwNSw4LjQ0OC0yMi41NzEsMTkuNDU2bC04LjQ2OSw1OS4xMTVjLTExLjE3OSw1LjAzNS0yMi4xNjUsMTEuNDM1LTMzLjI4LDE5LjM0OWwtNTUuNjgtMjIuMzU3DQoJCQlDNzYuNTIsNzEuNTMxLDY0LjA0LDc2LjA1Myw1OC44NTYsODUuNTY4TDkuODU0LDE3MC4zNDdjLTUuNzgxLDkuNzcxLTMuMzkyLDIyLjQ2NCw1LjU0NywyOS41NDdsNDcuMDYxLDM2LjgNCgkJCWMtMC43NDcsNy4xODktMS4xMDksMTMuNDQtMS4xMDksMTkuMzA3czAuMzYzLDEyLjExNywxLjEwOSwxOS4zMjhsLTQ3LjEwNCwzNi44MjFjLTguNzQ3LDYuOTMzLTExLjExNSwxOS4yLTUuNTQ3LDI5LjM5Nw0KCQkJbDQ4LjkzOSw4NC42NzJjNS4yMjcsOS41MzYsMTYuNTc2LDE0LjQ4NSwyOC4zMDksMTAuMTc2bDU1LjUzMS0yMi4yOTNjMTAuNjI0LDcuNjU5LDIxLjc4MSwxNC4xNDQsMzMuMzIzLDE5LjM0OWw4LjQ0OCw1OC44OA0KCQkJQzE4NS43NDcsNTAzLjU1MiwxOTUuNDU0LDUxMiwyMDYuOTc0LDUxMmg5OC4xMzNjMTEuNDk5LDAsMjEuMjI3LTguNDQ4LDIyLjU5Mi0xOS40NTZsOC40NjktNTkuMDkzDQoJCQljMTEuMTc5LTUuMDU2LDIyLjE0NC0xMS40MzUsMzMuMjgtMTkuMzcxbDU1LjY4LDIyLjM1N2MyLjY4OCwxLjA0NSw1LjQ4MywxLjU3OSw4LjM2MywxLjU3OWM4LjI3NywwLDE1Ljg5My00LjUyMywxOS43MzMtMTEuNTYzDQoJCQlsNDkuMTUyLTg1LjEyQzUwNy44MzgsMzMxLjM0OSw1MDUuNDQ4LDMxOS4wODMsNDk2LjY1OSwzMTIuMTA3eiBNMjU2LjAxOSwzNDEuMzMzYy00Ny4wNjEsMC04NS4zMzMtMzguMjcyLTg1LjMzMy04NS4zMzMNCgkJCXMzOC4yNzItODUuMzMzLDg1LjMzMy04NS4zMzNzODUuMzMzLDM4LjI3Miw4NS4zMzMsODUuMzMzUzMwMy4wOCwzNDEuMzMzLDI1Ni4wMTksMzQxLjMzM3oiLz4NCgk8L2c+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==" />
+          </div>
+        </div>
+        <div class="bottom-section"> 
+          <%= yield %>
+      </div>
+   
+    <% else %>
+      
+        <div class="left-container twitter-color"></div>
+        <div class="right-container text-center pt-3 pr-3 pl-3 pb-3 margin-login">
+          <%= yield %>
+        </div>
+      
+    <% end %>
+
+  </body>
+</html>

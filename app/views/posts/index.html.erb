@@ -1,0 +1,67 @@
+<div class=" bottom-left">
+  <div class="bg-success text-center">
+    <p id="notice " ><%= notice %></p>
+  </div>
+  <div class="bg-danger text-center"><p id="notice " ><%= alert %></p></div>
+   <div class="bottom-nav d-flex mb-3">
+      <span class="nav-bttn "><a href="/" class="hard-gray-text">POSTS</a></span>
+      <span class="nav-bttn "><a href="/" class="hard-gray-text">PHOTOS</a></span>
+      <span class="nav-bttn "><a href="/" class="hard-gray-text">VIDEOS</a></span>
+    </div>
+  <div class="container ">
+   
+    <div class="text-left">
+      <div class=" conatiner bg-white pt-3 pl-3 pb-3 pr-3 rounded">
+        <span class="title title-color">POST SOMETHING</span>  
+        <%= form_for(@post) do |form| %>
+          <%= form.text_field :content, id: :post_content, class: 'form-control', placeholder: 'Add New Post' %>
+          <% if @post.errors.full_messages.any? %>
+            <p class="errors">
+              <%= "Post could not be saved. #{@post.errors.full_messages.join('. ')}" %>
+            </p>
+          <% end %>
+          <%= form.submit 'Post', class: 'btn btn-primary mt-1 twitter-color' %>
+        <% end %>
+      </div>
+      <br>
+      <div class="container border bg-white posts pt-1 pb-3">
+        <div class="pt-3 pb-3 recent_post_border mb-3">
+          <span class="twitter-text">Recent Posts</span><br>
+        </div>
+            <% @posts.each do |post| %>
+            <div class="d-flex">
+              <div>
+                    <img class="icon-user mr-2" src="https://www.ub.edu/idp/web/sites/default/files/staff/2019-10/default-avatar.png">
+              </div>
+              <div class="post-right">
+                <div class="d-flex justify-content-between">
+                  <%= post.user.username %><br>
+                  <%= like_or_dislike_btn(post) %>
+                </div>
+                <span class="gray-text"><%= post.content %></span><br>
+                
+                <span>Likes: <%= post.likes.count %><br></span>
+                <div>
+                  <% post.comments.each do |comment| %>
+                  
+                      <span><%= comment.user.username %> : <%= comment.content %><br> </span>
+
+                  <% end %>
+                  <%= form_for(post.comments.new, url: post_comments_path(post)) do |form| %>
+                    <%= form.text_field :content, id: :comment_content, class: 'form-control', placeholder: 'Add new Comment' %>
+                    <%= form.submit 'Comment', class: 'btn btn-secondary mt-2 mb-2' %>
+                  <% end %>
+                </div>     
+              </div>
+            </div>
+            <% end %>
+      </div>
+      <br>
+    </div>
+  </div>
+</div>
+<div class="botton-right">
+  <%= render 'follow' %>
+  
+</div>
+

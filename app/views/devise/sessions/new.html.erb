@@ -1,0 +1,39 @@
+
+
+
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class=" d-flex justify-content-center">
+      <div class="field mr-3">
+        <%= f.text_field :username,  placeholder: "username", class: "rounded login-input" %>
+      </div>
+
+      <div class="field mr-3">
+        <%= f.text_field :email, autofocus: true, autocomplete: "email" ,placeholder: "email", class: "rounded login-input" %>
+      </div>
+
+      <div class="field mr-3">
+        <%= f.password_field :password, autocomplete: "current-password" , placeholder: "password", class: "rounded login-input"%>
+      </div>
+
+    <div class="actions">
+      <%= f.submit "Log in",  :class => 'twitter-text bg-white border-login-btn login-input' %>
+    </div>
+  </div>
+  <% end %>
+  <div class="d-flex justify-content-center mt-3">
+    <%= render "devise/shared/links" %>
+  </div>
+  <div class="title-login">
+    <span class="login-text">See what's happening in</span><br>
+    <span class="login-text">the world right now</span>
+    <br>
+    <br>
+    <br>
+    <span class=" mb-3">Join today</span><br><br>
+    <%= link_to "Sign up", new_user_registration_path, class: "Sign-in text-white twitter-color" %><br><br>
+    <%= link_to "Log in", new_user_session_path, class: "Sign-in bg-white text-dark border border-dark" %>
+
+          
+
+  </div>
+
