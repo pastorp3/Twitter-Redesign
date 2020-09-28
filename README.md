@@ -20,7 +20,7 @@ posts in the home page, also you can like or dislike a posts and you will se the
 
 ## Live Demo
 
-[Check the app out!!!](https://fast-eyrie-13626.herokuapp.com/users/sign_in)
+[Check the app out!!!](https://agile-escarpment-59970.herokuapp.com/)
 
 You have to Sign up to acces to de home page and interact with other users
 
