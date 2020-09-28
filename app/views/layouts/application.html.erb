@@ -15,7 +15,8 @@
       <div class="left-container bg-dark">
           <div class="d-flex pt-3 pb-3 pr-3 pl-3">
             <img class="icon-user mr-2" src="https://www.ub.edu/idp/web/sites/default/files/staff/2019-10/default-avatar.png">
-            <span class="title-color username"><%= current_user.username %></span>
+            <span class="title-color username"><%= link_to "#{current_user.username}", "/users/#{current_user.id}",
+            class: "title-color" %></span>
           </div>
           <div class="d-flex text-center pl-3 pr-3 justify-content-between mt-3">
             <div>
