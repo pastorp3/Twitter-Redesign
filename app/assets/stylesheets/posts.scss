@@ -1,3 +1,66 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.bottom-left {
+  width: 80%;
+  border-right: 1px solid #aab8c2;
+}
+
+.bottom-nav {
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid #aab8c2;
+  color: #657786;
+}
+
+.nav-bttn {
+  text-decoration: none;
+  padding: 5px 15px 5px 15px;
+  font-weight: 700;
+}
+
+.hard-gray-text {
+  color: #657786;
+}
+
+.title {
+  font-size: 20px;
+}
+
+.title-color {
+  color: #657786;
+}
+
+.posts {
+  height: fit-content;
+}
+
+.recent_post_border {
+  border-bottom: 1px solid #aab8c2;
+}
+
+.twitter-text {
+  color: #00acee;
+}
+
+.post-right {
+  width: 100%;
+}
+
+.gray-text {
+  color: #aab8c2;
+}
+
+.bottom-right {
+  width: 20%;
+}
+
+.nav-title {
+  padding: 5px 15px 5px 15px;
+  font-weight: 700;
+}
+
+.follow-link {
+  font-size: 10px;
+}
