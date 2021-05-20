@@ -44,13 +44,13 @@ git clone https://github.com/pastorp3/Twitter-Redesign.git
 
 
 Instal gems with:
-
-```
-yarn install --check-files
-```
-Installl yatn 
 ```
 bundle install
+```
+
+Installl yarn files
+```
+yarn install --check-files
 ```
 
 Setup database with:
