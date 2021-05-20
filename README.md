@@ -34,7 +34,7 @@ To get a local copy up and running follow these simple example steps.
 - Ruby: 2.7.0
 - Rails: 6.0.3.3
 - Postgres: >=9.5
-- - Yarn
+- Yarn
 
 ### Setup
 Clone Repo with:
